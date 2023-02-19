@@ -2,7 +2,7 @@ package day12_forLoops;
 
 import java.util.Scanner;
 
-public class C03_forLoop {
+public class C03_ForLoop {
     public static void main(String[] args) {
         //Soru 4- Kullanicidan baslangic ve bitis degeri olarak pozitif sayilar alin,
         // sinirlar dahil olarak aralarindaki tum sayilarin toplamini yazdirin.

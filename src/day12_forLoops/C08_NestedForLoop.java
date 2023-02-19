@@ -15,9 +15,18 @@ public class C08_NestedForLoop {
         int satirSayisi=3;
         int sutunsayisi=5;
 
-        for (int i = 1; i <=sutunsayisi; i++) {
-            System.out.print("* ");
-
+        for (int k=1 ; k<=satirSayisi ; k++) { // satir sayisini
+            for (int i = 1; i <=sutunsayisi ; i++) { // sutun sayisini
+                System.out.print("* ");
+            }
+            System.out.println(""); // bir satirdaki tum sutunlar bitince alt satira geciyor
+        }
+        System.out.println("===========");
+        for (int i = 1; i <=satirSayisi ; i++) { // satirlar
+            for (int j = 1; j <=sutunsayisi ; j++) { // sutunlar
+                System.out.print("* ");
+            }
+            System.out.println("");
         }
     }
 }

@@ -1,6 +1,6 @@
 package day12_forLoops;
 
-public class C02_forLoop {
+public class C02_ForLoop {
     public static void main(String[] args) {
         //Soru 3- Kullanicidan baslangic ve bitis degeri olarak pozitif sayilar alin,
         // sinirlar dahil olarak aralarindaki tum sayilarin toplamini yazdirin.
