@@ -15,7 +15,6 @@ public class C04_MethodKullanma {
 
         int sonuc= C03_MethodOlusturma_FaktoryelHesapla.faktoryelHesapla(sayi1)
                 + C03_MethodOlusturma_FaktoryelHesapla.faktoryelHesapla(sayi2);
-        System.out.println(sonuc);
 
         System.out.println(sonuc); // 30
     }
