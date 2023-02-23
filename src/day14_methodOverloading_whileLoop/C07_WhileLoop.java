@@ -23,7 +23,7 @@ public class C07_WhileLoop {
 
 
         while(flag != 4){
-            flag=0;
+            flag=0; // her seferinde 0'dan baslamasi icin
             System.out.println("Lutfen bir sifre giriniz");
             sifre= scan.nextLine();
 
