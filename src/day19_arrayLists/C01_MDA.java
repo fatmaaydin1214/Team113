@@ -23,9 +23,13 @@ public class C01_MDA {
         // toplamlari koymak icin yeni bir array olusturalim
 
         int[] toplamlarArrayi= new int[enKisaArrayLength];
+
         int indexdekiElementlerToplami=0;
+
         for (int i = 0; i < toplamlarArrayi.length ; i++) {
+
             for (int j = 0; j <arr.length ; j++) {
+
                 indexdekiElementlerToplami += arr[j][i];
             }
             toplamlarArrayi[i]=indexdekiElementlerToplami;
