@@ -3,13 +3,17 @@ package week4;
 public class P07_forLoop {
     public static void main(String[] args) {
          /*
-        //verilen String'deki kullalanilan harfleri
-        // kelimeyi ve tekrarsiz halini yazdirip
-        // kelimede kullanilan farkli harf sayisini yazdırın
+         verilen String'deki kullalanilan
+         harfleri, kelimenin
+         tekrarsiz halini yazdirip
+         kelimede kullanilan farkli harf sayisini yazdırın
          */
-        String input = "Have nice day";
+        String input = "Have a nice day";
+
         String tekrarsizInput = "";
+
         String islenecekKelime = input.replaceAll("\\W", ""); //Haveaniceday
+
         System.out.print(input.substring(0, 1));//H
         tekrarsizInput = islenecekKelime.substring(0, 1);//H
 
