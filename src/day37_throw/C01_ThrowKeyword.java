@@ -1,12 +1,12 @@
-package day36_exceptions;
+package day37_throw;
 
 import java.util.Scanner;
 
-public class C08_ThrowKeyword {
+public class C01_ThrowKeyword {
 
     public static void main(String[] args) {
 
-        /*
+          /*
             Kodlari yazarken bazen muhtemel bir durumda
             bazi kodlarin ignore edilmesi istenebilir
 
@@ -21,10 +21,12 @@ public class C08_ThrowKeyword {
         System.out.println("Lütfen yasinizi girin");
         int yas = scan.nextInt();
 
-        if (yas<0){
-            System.out.println("yanlis giris yaptiniz, tekrar deneyiniz");
+        try {
+            if (yas<0){
+                throw new IllegalArgumentException("Yanlis formatta giris yapildi");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
         }
-
-
     }
 }
