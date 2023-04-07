@@ -120,4 +120,60 @@ public class MapMethodDepo {
         //7- mapin yeni halini return et.
         return okulMap;
     }
+
+    public static void sinifaGoreListeYazdir(Map<Integer, String> okulMap, int istenenSinif) {
+
+        //1- Okulmap'deki entry'leri kaydedelim
+        Set<Map.Entry<Integer, String>>  okulEntrySeti=okulMap.entrySet();
+
+        //2- Herbir enty'i ele alip, istenen islemi yaptiralim
+        for (Map.Entry<Integer,String> eachEntry:okulEntrySeti
+             ) {
+            // eachEntry = 101=Ali-Cem-10-H-MF
+
+
+            //isim, soyisim, bolumlerini
+            String  value = eachEntry.getValue();//Ali-Cem-10-H-MF
+            String[] valueArr = value.split("-");
+
+            if (valueArr[2].equals(istenenSinif+"")){
+                // no,
+                System.out.print(eachEntry.getKey() + " ");
+
+                System.out.print(valueArr[0]+ " "+ valueArr[1]+" "+ valueArr[4]);
+
+                System.out.println();
+            }
+
+
+        }
+    }
+
+    public static Map<Integer, String> soyisimleriBuyukYap(Map<Integer, String> okulMap) {
+
+        // Enrty ler ile cozelim
+
+        Set< Map.Entry<Integer, String >> okulEntrySeti = okulMap.entrySet();
+
+        //herbir Entryleri elden gecirip, sadece soyisimleri buyuk harf yapalim
+
+        for (Map.Entry<Integer,String> eachEntry:okulEntrySeti
+             ) {
+
+            //herbir entrydeki value alalim
+            String  value = eachEntry.getValue();//Ali-Cem-10-H-MF
+
+            //valueyu array'e cevirelim
+            String[] valueArr = value.split("-");
+
+            //Array icinde soyismi buyuk harf yapalim
+
+            valueArr[1] = valueArr[1].toUpperCase();//
+
+            eachEntry.setValue(valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+
+                    valueArr[3]+"-"+valueArr[4]+"-");
+
+        }
+        return okulMap;
+    }
 }
